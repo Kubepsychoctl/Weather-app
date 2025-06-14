@@ -5,17 +5,19 @@ import (
 	"fmt"
 
 	"weather-app/geo"
+	"weather-app/weather"
 )
 
 func main() {
 	city := flag.String("city", "", "City of the user")
+	format := flag.Int("format", 1, "Format of the weather")
 
 	flag.Parse()
 
-	fmt.Println(*city)
 	geoData, err := geo.GetMyLocation(*city)
 	if err != nil {
 		fmt.Println("Error getting my location:", err)
 	}
-	fmt.Println(geoData)
+	weatherData := weather.GetWeather(*geoData, *format)
+	fmt.Println(weatherData)
 }
