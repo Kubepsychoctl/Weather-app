@@ -17,6 +17,8 @@ func TestGetMyLocation(t *testing.T) {
 	if err != nil {
 		t.Error("Error getting city", err)
 	}
+
+	// Assert
 	if got.City != expected.City {
 		t.Errorf("Expected city %v, got %v", expected.City, got.City)
 	}
