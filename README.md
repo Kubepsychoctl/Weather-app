@@ -13,7 +13,7 @@ A simple Go command-line application that fetches weather information for any ci
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Kubepsychoctl/Weather-app
    cd weather-app
    ```
 
